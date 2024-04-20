@@ -1,0 +1,173 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+
+
+{% block header_div %}
+
+
+    <div class="h_second" id="second">
+        <div class="m_text">
+            <h3 class="d-flex justify-content-center fs-3 font_fv text-white">Welcome to</h3>
+            <h1 class="d-flex justify-content-center my-5 font_fv text-white fs-1 fs-md-0"
+                style="letter-spacing: 2px; font-size: 60px;">Kandy Preschool</h1>
+            <h3 class="d-flex justify-content-center font_fv text-white">Play. Explore. Learn.</h3>
+        </div>
+
+        <div class="h_button d-flex justify-content-center pt-3">
+            <a href="{% url 'programs-p' %}" class="text_dn1">
+                <button class="btn btn-primary px-5 mt-2 back_style_g font_fp fw-bold fs-6 border-0"
+                        style="padding-top: 18px;padding-bottom: 18px;letter-spacing: 3px; border-radius:8px;">GET
+                    STARTED
+                </button>
+            </a>
+        </div>
+    </div>
+
+
+{% endblock header_div %}
+
+
+
+{% block body %}
+
+
+    <section class="h_section_1 px-lg-5">
+        <div class="section_1 py-5 px-lg-5 my-lg-5 text-center container">
+
+            <h2 class="font_fv text_cb pb-5">Kandy Preschool provides exceptional care and education in a safe
+                and
+                nurturing environment for children 15 months- 5 years old</h2>
+
+            <iframe class="" width="100%" height="502"
+                    src="https://www.youtube.com/embed/DUMwITSIS-Y?si=cfs4M4z7kg-W9ape"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+
+        </div>
+    </section>
+
+    <section class="h_section_2 py-5">
+        <div class="section_2 container py-5">
+            <div class="row row-cols-1 row-cols-lg-3 g-4 justify-content-between">
+                <div class="col-lg-4">
+                    <div class="card h-100 border-0" style="background: none;">
+                        <img src="{% static "main/img/TSD_image_toddler.jpg" %}" class="card-img-top rounded-3 opacity_img"
+                             alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center fs-4 fs-sm-2 fw-light font_fv mb-4"
+                                style="color: rgb(0, 77, 107);">Toddler Classroom <br> (15-24 months)</h5>
+                            <p class="card-text font_style_g text-center font_fp lh-base fs-sm-5 fs-6">With our low
+                                teacher
+                                to child ratio, we are able to provide a high level of teacher interaction with your
+                                child.
+                                Your toddler will explore, question and discover with age appropriate materials and
+                                activities.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card h-100 border-0" style="background: none;">
+                        <img src="{% static "main/img/TSD_image_3s (1).jpg" %}" class="card-img-top rounded-3 opacity_img"
+                             alt="...">
+                        <div class="card-body">
+                            <h5 class="card-titl text-center fs-4 fs-sm-2 fw-light font_fv mb-4"
+                                style="color: rgb(186, 196, 5);">2/3 Classroom <br> (2-3 years)</h5>
+                            <p class="card-text font_style_g text-center font_fp lh-base fs-sm-5 fs-6">Your younger
+                                preschooler will build on basic concepts such as counting, letter and number recognition
+                                and
+                                phonemic awareness while having plenty of opportunities to play and improve his/her
+                                social
+                                skills.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card h-100 border-0" style="background: none;">
+                        <img src="{% static "main/img/TSD_image_preschool.jpg" %}" class="card-img-top rounded-3 opacity_img"
+                             alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center fs-4 fs-sm-2 fw-light font_fv mb-4"
+                                style="color: rgb(220, 80, 4);">Preschool Classroom <br> (3-5 years)</h5>
+                            <p class="card-text font_style_g text-center font_fp lh-base fs-sm-5 fs-6">Our preschool
+                                program
+                                prepares your child for the next exciting chapter in his/her educational
+                                career…kindergarten! With a combination of teacher-guided small and whole group learning
+                                experiences, child-guided activities and free choice centers, your child will strengthen
+                                his/her areas of social and emotional, physical, language and literacy, mathematical
+                                reasoning, social studies, science and creative developments.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="h_button d-flex justify-content-center pt-3">
+                <a href="{% url 'programs-p' %}" class="text_dn1">
+                    <button class="btn btn-primary px-5 py-4 mt-2 back_style_g font_fp fw-bold fs-6 border-0"
+                            style="padding-top: 20px;padding-bottom: 20px;letter-spacing: 3px; border-radius:8px;">VIEW
+                        PROGRAMS
+                    </button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="h_section_3">
+        <div class="section_3 container py-5">
+            <h3 class="fs-2 font_fv text-white text-center pb-3">See what parents are saying</h3>
+            <div class="row row-cols-1 row-cols-lg-3 g-4 justify-content-center align-items-center">
+                <div class="col-lg-4">
+                    <p class="font_fp text-white fs-sm-5 text-center">While attending Kandy Preschool, our
+                        daughter has been exposed to a variety of engaging subject matter ranging from the Food Pyramid
+                        and
+                        healthy eating choices to the individual states which comprise our country.</p>
+                </div>
+                <div class="col-lg-4">
+                    <p class="font_fp text-white fs-sm-5 text-center">The environment is well structured, and there is a
+                        nice balance of activities that prep the kids for the sort of things they’ll do in kindergarten
+                        and
+                        more play-based activities, like going to the park and doing arts and crafts.</p>
+                </div>
+                <div class="col-lg-4">
+                    <p class="font_fp text-white fs-sm-5 text-center">I feel comfortable with the care she receives and
+                        the
+                        open and welcoming atmosphere of the management team. The lesson plans planning for the month is
+                        impressive but yet the kids still have a perfect balance of playtime and structured learning
+                        time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="h_section_4">
+        <div class="hsection_4 container py-5">
+            <div class="row row-cols-1 justify-content-center">
+                <div class="col-sm-7 align-self-center">
+                    <div class="card h-100 border-0 sec4_" style="background: none;">
+                        <img src="{% static "main/img/TSD_icon_contact.png" %}"
+                             class="card-img-top rounded-3 w-25 m-auto opacity_img" alt="...">
+                        <div class="card-body p-0 p-sm-3">
+                            <h5 class="card-title text-center fs-2 fw-light font_fv mb-4"
+                                style="color: rgb(0, 77, 107);">
+                                Ready to join a learning adventure?</h5>
+                            <p class="card-text font_style_g text-center font_fp lh-base fs-5">If you are interested in
+                                learning more about our program or how to enroll, please click on the button below to
+                                fill
+                                out our questionnaire and we will get back to you as soon as possible!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="h_button d-flex justify-content-center pt-3">
+                <a href="{% url 'contact-p' %}" class="text_dn1">
+                    <button class="btn btn-primary px-3 py-3 px-sm-5 py-sm-4 mt-2 back_style_g font_fp fw-bold fs-6 border-0"
+                            style="padding-top: 20px;padding-bottom: 20px;letter-spacing: 3px; border-radius:8px;">
+                        CONTACT US
+                    </button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock body %}

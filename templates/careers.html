@@ -1,0 +1,69 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% load crispy_forms_filters %}
+
+
+{% block header_div %}
+
+
+    <div class="h_second c_second d-flex justify-content-center align-items-center row" id="second">
+        <h1 class="col-8 fs-1 font_fv text-white text-center text-center">Join the Kandy team!</h1>
+    </div>
+
+
+{% endblock header_div %}
+
+
+
+{% block body %}
+
+
+    <section class="c_section_1 px-lg-5">
+        <div class="csection_1 py-5 px-lg-5 my-3 text-center container">
+            <div class="row justify-content-center">
+                <h3 class="col-md-10 fs-4 fs-md-3 fs-lg-2 fw-lighter font_style_b font_fv mb-4">We are seeking
+                    qualified, experienced and passionate educators! Our goal is to add talented, energetic and positive
+                    people to our team.</h3>
+            </div>
+            <div class="row justify-content-center">
+                <p class="font_style_g font_fp lh-base fs-6">If you are interested in joining our team, please fill out
+                    the form below and one of our administrators will be in contact with you.</p>
+                <form action="{% url 'career-p' %}" class="col-lg-8 col-12 col-sm-14" method="POST">
+                    {% csrf_token %}
+                    <div class="mb-3 text-start">
+                        <label for="formGroupExampleInput"
+                               class="form-label font_fv font_style_b fw-lighter">Full Name</label>
+                        {{ form.f_name|as_crispy_field }}
+                        {{ form.f_name|as_crispy_errors }}
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label for="formGroupExampleInput2"
+                               class="form-label font_fv font_style_b fw-lighter">Email</label>
+                        {{ form.email|as_crispy_field }}
+                        {{ form.email|as_crispy_errors }}
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label for="formGroupExampleInput3"
+                               class="form-label font_fv font_style_b fw-lighter">Phone Number</label>
+                        {{ form.p_number|as_crispy_field }}
+                        {{ form.p_number|as_crispy_errors }}
+                    </div>
+                    <div class="form-floating text-start">
+                        <p class="font_fv font_style_b fw-lighter">Message</p>
+                        {{ form.message|as_crispy_field }}
+                        {{ form.message|as_crispy_errors }}
+                    </div>
+
+                    <div class="h_button d-flex justify-content-center pt-3">
+                        <button type="submit"
+                                class="btn btn-primary py-3 px-5 mt-2 back_style_g btn-outline-light font_fp fw-bold fs-6 border-0"
+                                style="letter-spacing: 3px; border-radius:8px;">SEND
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock body %}

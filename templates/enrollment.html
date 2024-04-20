@@ -1,0 +1,308 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% load crispy_forms_filters %}
+
+
+
+
+{% block header_div %}
+
+
+    <div class="h_second c_second d-flex justify-content-center align-items-center row" id="second">
+        <h2 class="col-8 fs-1 font_fv text-white text-center text-center">We work to build a solid foundation for your
+            child’s learning</h2>
+    </div>
+
+
+{% endblock header_div %}
+
+
+
+{% block body %}
+
+
+    <section class="e_section_1 px-md-5" id="e_section_1">
+        <div class="esection_1 py-5 px-md-5 my-3 text-center container">
+            <div class="row justify-content-center">
+                <h3 class="col-lg-8 fs-2 fw-lighter font_style_b font_fv mb-4"> Take the first steps toward learning
+                    more about Kandy Preschool</h3>
+            </div>
+            <div class="pt-5 row row-cols-1 row-cols-md-2 g-4 gx-4 justify-content-around align-items-end">
+                <div class="card-none col-xl-5 col-8 row justify-content-center" style="background: none;">
+                    <div class="col-6">
+                        <img src="{% static 'main/img/i_laptop.jpeg' %}" class="img-fluid w-100 opacity_img" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <p class="font_style_g font_fp lh-base fs-6">To get a better idea of your child’s needs, please
+                            click below to fill out our questionnaire.</p>
+                        <div class="h_button d-flex justify-content-center pt-3">
+                            <a href="{% url 'contact-p' %}"
+                               class="text_dn1">
+                                <button class="btn btn-primary px-3 px-sm-5 py-3 py-sm-3 mt-2 back_style_g font_fp fw-bold fs-6 border-0"
+                                        style="padding-top: 18px;padding-bottom: 18px;letter-spacing: 3px; border-radius:8px;">
+                                    CONTACT US
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-none col-xl-5 col-8 row justify-content-center pt-3 pt-md-0">
+                    <div class="col-5">
+                        <img src="{% static 'main/img/i_writing+.png' %}" class="img-fluid w-100 opacity_img" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text font_style_g font_fp lh-base fs-6">Ready to enroll? Download our enrollment
+                            form and email it to <a href="mailto:info@twinklingstarschicago.com">info@twinklingstarschicago.com</a>
+                        </p>
+                        <div class="h_button d-flex justify-content-center pt-3">
+                            <button type="button"
+                                    class="btn btn-primary px-3 px-sm-5 py-3 py-sm-3 mt-2 back_style_g font_fp fw-bold fs-6 border-0"
+                                    style="padding-top: 18px;padding-bottom: 18px;letter-spacing: 3px; border-radius:8px;"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal"
+                                    data-bs-whatever="@mdo" id="btnjon">
+                                ENROLLMENT
+                            </button>
+
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                 aria-hidden="true">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5 fw-lighter font_style_b font_fv"
+                                                id="exampleModalLabel">Enrollment
+                                                form:</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="nav_t text">
+                                                <ul class="d-flex justify-content-center align-items-center ul_li ps-0 mb-0">
+                                                    <li class="nav-item w-25">
+                                                        <a href="{% url 'home-p' %}" class="">
+                                                            <img src="{% static 'main/img/For_Web_3/svg/Color logo - no background.svg' %}"
+                                                                 alt=""
+                                                                 class="w-100"
+                                                                 aria-current="page">
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <p class="font_style_g font_fp lh-base fs-6">Please fill the
+                                                    enrollment.</p>
+                                            </div>
+                                            <form class="pt-1" method="POST" action="{% url 'enrollment-p' %}">
+                                                {% csrf_token %}
+                                                <div class="mb-3 text-start">
+                                                    <div class="row justify-content-center">
+                                                        {#                                                        <form action="{% url 'enrollment-p' %}"#}
+                                                        {#                                                              class="" method="POST">#}
+                                                        {#                                                            {% csrf_token %}#}
+                                                        <div class="col-12 col-sm-14 mb-3 text-start">
+                                                            <label for="formGroupExampleInput"
+                                                                   class="form-label font_fv font_style_b fw-lighter">Parent
+                                                                full name</label>
+                                                            {{ form.parent_fname|as_crispy_field }}
+                                                            {{ form.parent_fname|as_crispy_errors }}
+                                                        </div>
+                                                        <div class="col-12 col-sm-14 mb-3 text-start">
+                                                            <label for="formGroupExampleInput2"
+                                                                   class="form-label font_fv font_style_b fw-lighter">Parent
+                                                                address</label>
+                                                            {{ form.parent_address|as_crispy_field }}
+                                                            {{ form.parent_address|as_crispy_errors }}
+                                                        </div>
+                                                        <div class="col-12 col-sm-14 mb-3 text-start">
+                                                            <label for="formGroupExampleInput3"
+                                                                   class="form-label font_fv font_style_b fw-lighter">Email</label>
+                                                            {{ form.email|as_crispy_field }}
+                                                            {{ form.email|as_crispy_errors }}
+                                                        </div>
+                                                        <div class="col-12 col-sm-14 mb-3 text-start">
+                                                            <label for="formGroupExampleInput4"
+                                                                   class="form-label font_fv font_style_b fw-lighter">Home
+                                                                phone number</label>
+                                                            {{ form.home_phone|as_crispy_field }}
+                                                            {{ form.home_phone|as_crispy_errors }}
+                                                        </div>
+                                                        <div class="col-12 col-sm-14 mb-3 text-start">
+                                                            <label for="formGroupExampleInput5"
+                                                                   class="form-label font_fv font_style_b fw-lighter">Cell
+                                                                phone number</label>
+                                                            {{ form.cell_phone|as_crispy_field }}
+                                                            {{ form.cell_phone|as_crispy_errors }}
+                                                        </div>
+                                                        <div class="col-12 col-sm-14 mb-3 text-start">
+                                                            <label for="formGroupExampleInput6"
+                                                                   class="form-label font_fv font_style_b fw-lighter">Child's
+                                                                full name</label>
+                                                            {{ form.child_fname|as_crispy_field }}
+                                                            {{ form.child_fname|as_crispy_errors }}
+                                                        </div>
+                                                        <div class="col-12 col-sm-14 mb-3 text-start">
+                                                            <label for="formGroupExampleInput8"
+                                                                   class="form-label font_fv font_style_b fw-lighter">Date
+                                                                of Birth</label>
+                                                            {{ form.date_of_birth|as_crispy_field }}
+                                                            {{ form.date_of_birth|as_crispy_errors }}
+                                                        </div>
+                                                        <div class="col-12 col-sm-14 mb-3 text-start">
+                                                            <label for="formGroupExampleInput9"
+                                                                   class="form-label font_fv font_style_b fw-lighter">Child
+                                                                Address</label>
+                                                            {{ form.child_address|as_crispy_field }}
+                                                            {{ form.child_address|as_crispy_errors }}
+                                                        </div>
+                                                        <div class="col-12 col-sm-14 mb-3 text-start">
+                                                            <label for="formGroupExampleInput10"
+                                                                   class="form-label font_fv font_style_b fw-lighter">Child's
+                                                                Img</label>
+                                                            {{ form.child_img|as_crispy_field }}
+                                                            {{ form.child_img|as_crispy_errors }}
+                                                        </div>
+                                                        <div class="col-12 col-sm-14 form-floating text-start">
+                                                            <p class="font_fv font_style_b fw-lighter">
+                                                                Any additional information you
+                                                                would like to provide?</p>
+                                                            {{ form.child_text|as_crispy_field }}
+                                                            {{ form.child_text|as_crispy_errors }}
+                                                        </div>
+                                                        {#                                                        </form>#}
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button"
+                                                            class="btn btn-secondary text_dn1 py-2 px-4 m-0 me-4 font_fp fw-bold fs-6 border-0"
+                                                            data-bs-dismiss="modal"
+                                                            style="border-radius:8px;">Close
+                                                    </button>
+                                                    <button type="submit"
+                                                            class="btn btn-primary py-2 px-4 m-0 me-4 text_dn1 back_style_g font_fp fw-bold fs-6 border-0"
+                                                            style="letter-spacing: 3px;border-radius:8px;">
+                                                        Send
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        </div>
+    </section>
+
+    <section class="e_section_1 h_section_2">
+        <div class="esection_1 py-5 px-lg-5 text-center container">
+            <div class="row row-cols-1 row-cols-lg-2 ">
+                <div class="col-lg-4 align-self-center">
+                    <img src="{% static 'main/img/TSD_enrollment_background_image.jpg' %}" class="img-fluid opacity_img"
+                         alt="...">
+                </div>
+                <div class="col-lg-8 text-start ps-lg-5 pt-4 pt-lg-0 align-self-center">
+                    <h3 class="card-title font_style_b fs-2 fw-lighter font_fv mb-4">Enrollment details</h3>
+                    <p class="card-text font_style_g font_fp lh-base fs-6">If after your visit you are interested in
+                        enrolling your child, you must submit an <a href="#e_section_1">Application for Enrollment</a>
+                        and
+                        Enrollment Deposit to secure a spot in our program or hold a space on our waitlist. If your
+                        child is placed on the waitlist, your deposit will be held until a space becomes available. If
+                        you withdraw your child from the waitlist before a space becomes available, then your tuition
+                        deposit may be refunded, however, you must notify the Center in writing. <br> <br>
+
+                        Once a space becomes available and has been reserved for your child, you will not be entitled to
+                        a refund. After the application and deposit is received, you will be provided with an enrollment
+                        packet and asked to schedule your orientation. <br> <br>
+
+                        Enrollment at TSP is on a first come, first served basis and spaces may not be held without an
+                        <a
+                                href="#e_section_1">Application for Enrollment</a> and Enrollment Deposit. Once our
+                        program is full,
+                        children will be placed on a waitlist and then accepted as space becomes available.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        {% if error_m == 'error' %}
+            window.onload = function () {
+                var button = document.getElementById('btnjon');
+                button.click();
+            }
+        {% endif %}
+    </script>
+
+{% endblock body %}
+
+{#  <div class="col-auto">#}
+{#    <label class="visually-hidden" for="autoSizingSelect">Preference</label>#}
+{#    <select class="form-select" id="autoSizingSelect">#}
+{#      <option selected>Choose...</option>#}
+{#      <option value="1">One</option>#}
+{#      <option value="2">Two</option>#}
+{#      <option value="3">Three</option>#}
+{#    </select>#}
+{#  </div>#}
+
+{#                                                                <div class="col-12 col-sm-14 mb-3 text-start">#}
+{#                                                                    <label for=""#}
+{#                                                                           class="form-label font_fv font_style_b fw-lighter">Please#}
+{#                                                                        select what days you are#}
+{#                                                                        interested in :</label>#}
+{#                                                                    <div class="form-check">#}
+{#                                                                        <input class="form-check-input" type="checkbox"#}
+{#                                                                               value="" id="monday">#}
+{#                                                                        <label class="form-check-label font_fv font_style_b fw-lighter"#}
+{#                                                                               for="monday">Monday</label>#}
+{#                                                                    </div>#}
+{#                                                                    <div class="form-check">#}
+{#                                                                        <input class="form-check-input" type="checkbox"#}
+{#                                                                               value="" id="tuesday">#}
+{#                                                                        <label class="form-check-label font_fv font_style_b fw-lighter"#}
+{#                                                                               for="tuesday">Tuesday</label>#}
+{#                                                                    </div>#}
+{#                                                                    <div class="form-check">#}
+{#                                                                        <input class="form-check-input" type="checkbox"#}
+{#                                                                               value="" id="wednesday">#}
+{#                                                                        <label class="form-check-label font_fv font_style_b fw-lighter"#}
+{#                                                                               for="wednesday">Wednesday</label>#}
+{#                                                                    </div>#}
+{#                                                                    <div class="form-check">#}
+{#                                                                        <input class="form-check-input" type="checkbox"#}
+{#                                                                               value="" id="thursday">#}
+{#                                                                        <label class="form-check-label font_fv font_style_b fw-lighter"#}
+{#                                                                               for="thursday">Thursday</label>#}
+{#                                                                    </div>#}
+{#                                                                    <div class="form-check">#}
+{#                                                                        <input class="form-check-input" type="checkbox"#}
+{#                                                                               value="" id="friday">#}
+{#                                                                        <label class="form-check-label font_fv font_style_b fw-lighter"#}
+{#                                                                               for="friday">Friday</label>#}
+{#                                                                    </div>#}
+{#                                                                </div>#}
+{#                                                                <div class="col-12 col-sm-14 mb-3 text-start">#}
+{#                                                                    <label for=""#}
+{#                                                                           class="form-label font_fv font_style_b fw-lighter">Is#}
+{#                                                                        your child#}
+{#                                                                        potty-trained?</label>#}
+{#                                                                    <div class="form-check">#}
+{#                                                                        <input class="form-check-input" type="radio"#}
+{#                                                                               name="yes_no" id="radio_yes">#}
+{#                                                                        <label class="form-check-label font_fv font_style_b fw-lighter"#}
+{#                                                                               for="radio_yes">#}
+{#                                                                            Yes#}
+{#                                                                        </label>#}
+{#                                                                    </div>#}
+{#                                                                    <div class="form-check">#}
+{#                                                                        <input class="form-check-input" type="radio"#}
+{#                                                                               name="yes_no" id="radio_no">#}
+{#                                                                        <label class="form-check-label font_fv font_style_b fw-lighter"#}
+{#                                                                               for="radio_no">#}
+{#                                                                            No#}
+{#                                                                        </label>#}
+{#                                                                    </div>#}
+{#                                                                </div>#}

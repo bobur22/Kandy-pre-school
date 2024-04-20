@@ -1,0 +1,90 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% load crispy_forms_filters %}
+
+
+{% block header_div %}
+
+
+    <div class="h_second con_second d-flex justify-content-center align-items-center row" id="second">
+        <h1 class="col-10 col-sm-7 fs-1 font_fv text-white text-center text-center">We are a vibrant preschool located
+            in the
+            scenic Roscoe Village neighborhood</h1>
+    </div>
+
+
+{% endblock header_div %}
+
+
+
+{% block body %}
+
+
+    <section class="con_section_1 px-lg-5">
+        <div class="consection_1 py-5 px-lg-5 my-3 text-center container">
+            <div class="row justify-content-center">
+                <h3 class="col-lg-10 fs-2 fw-lighter font_style_b font_fv mb-4">We invite you and your family to begin
+                    the enrollment process at Kandy Preschool.</h3>
+                <h3 class="col-lg-5 fs-2 fw-lighter font_style_b font_fv mb-4">Call us today at <a
+                        href="tel:+7732814411" class="text_dn font_style_b">773-281-4411</a> to schedule a tour today!
+                </h3>
+            </div>
+            <form action="{% url 'contact-p' %}" class="" method="POST">
+                {% csrf_token %}
+                <div class="row row-cols-1 justify-content-center">
+                    <div class="col-lg-8 col-12 col-sm-14 text-start">
+                        <label for="formGroupExampleInput" class="form-label font_fv font_style_b fw-lighter">Parent
+                            full name</label>
+                        {{ form.f_name|as_crispy_field }}
+                        {{ form.f_name|as_crispy_errors }}
+                    </div>
+                    <div class="col-lg-8 col-12 col-sm-14 mb-3 text-start">
+                        <label for="formGroupExampleInput2"
+                               class="form-label font_fv font_style_b fw-lighter">Email</label>
+                        {{ form.email|as_crispy_field }}
+                        {{ form.email|as_crispy_errors }}
+                    </div>
+                    <div class="col-lg-8 col-12 col-sm-14 mb-3 text-start">
+                        <label for="formGroupExampleInput3" class="form-label font_fv font_style_b fw-lighter">Phone
+                            number</label>
+                        {{ form.p_number|as_crispy_field }}
+                        {{ form.p_number|as_crispy_errors }}
+                    </div>
+                    <div class="col-lg-8 col-12 col-sm-14 mb-3 text-start">
+                        <label for="formGroupExampleInput4" class="form-label font_fv font_style_b fw-lighter">Child's
+                            full name</label>
+                        {{ form.c_f_name|as_crispy_field }}
+                        {{ form.c_f_name|as_crispy_errors }}
+                    </div>
+                    <div class="col-lg-8 col-12 col-sm-14 mb-3 text-start">
+                        <label for="formGroupExampleInput8" class="form-label font_fv font_style_b fw-lighter">Child's
+                            date of birth</label>
+                        {{ form.c_date|as_crispy_field }}
+                        {{ form.c_date|as_crispy_errors }}
+                    </div>
+                    <div class="col-lg-8 col-12 col-sm-14 mb-3 text-start">
+                        <label for="formGroupExampleInput9" class="form-label font_fv font_style_b fw-lighter">Anticipated
+                            start date</label>
+                        {{ form.a_date|as_crispy_field }}
+                        {{ form.a_date|as_crispy_errors }}
+                    </div>
+                    <div class="col-lg-8 col-12 col-sm-14 form-floating text-start">
+                        <p class="font_fv font_style_b fw-lighter">Any additional information you
+                            would like to provide?</p>
+                        {{ form.text|as_crispy_field }}
+                        {{ form.text|as_crispy_errors }}
+                    </div>
+                    <div class="col-lg-8 col-12 col-sm-14 h_button d-flex justify-content-center pt-3">
+                        <button type="submit"
+                                class="btn btn-primary py-3 px-4 mt-2 back_style_g font_fp fw-bold fs-6 border-0"
+                                style="letter-spacing: 3px; border-radius:8px;">SEND
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        </div>
+    </section>
+
+
+{% endblock body %}

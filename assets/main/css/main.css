@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-condensed');
+
+
+.font_style_g {
+    color: #61615C !important;
+}
+
+.font_style_b {
+    color: rgb(0, 77, 107) !important;
+}
+
+.back_style_b {
+    background-color: rgb(0, 77, 107) !important;
+}
+
+.font_style_gr {
+    color: rgb(186, 196, 5) !important;;
+}
+
+.back_style_gr {
+    background-color: rgb(186, 196, 5) !important;;
+}
+
+.font_style_r {
+    color: #DC5004 !important;;
+}
+
+.back_style_g {
+    background-color: #DC5004 !important;
+}
+
+.font_fv {
+    font-family: "Varela Round", sans-serif;
+}
+
+.font_fp {
+    font-family: 'Proxima Nova Condensed', sans-serif;
+}
+
+.text_cb {
+    color: rgb(0, 77, 107);
+}
+
+.btn_b:hover {
+    opacity: 0.8;
+}
+
+.nav_t ul > .uli_a > a:hover,
+.nav_t ul > .uli_m > a:hover {
+    cursor: pointer;
+    border-bottom: 2px solid #61615C;
+    opacity: 0.8;
+    transition: 0.2s ease-out;
+}
+
+.nav_t ul > li > a.active {
+    border-bottom: 2px solid #61615C;
+    transition: 1s ease-out;
+}
+
+.h_second {
+    padding-top: 220px;
+    padding-bottom: 90px;
+    background-image: url(../img/TSD_home_hero.jpg);
+    backdrop-filter: brightness(0.5);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    width: 100%;
+}
+
+.ul_li > li {
+    list-style: none;
+}
+
+.h_button > button:hover {
+    opacity: 0.8;
+    color: white;
+}
+
+.h_section_2 {
+    background-color: rgb(236, 236, 236);
+}
+
+.h_section_3 {
+    background-image: url(../img/TSD_background_white_stars.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.h_section_5 {
+    background-color: #61615C !important;
+}
+
+.text_dn {
+    text-decoration: none;
+    color: white;
+}
+
+.text_dn:hover {
+    opacity: 0.8;
+    color: white;
+}
+
+.text_dn1 {
+    text-decoration: none;
+}
+
+text_dn1 > button:hover {
+    opacity: 0.8;
+    color: white;
+}
+
+.text_dn1:hover {
+    opacity: 0.8;
+    color: white;
+}
+
+.opacity_img {
+    opacity: 1.0;
+    transition: 0.7s ease-in;
+
+}
+
+.opacity_img:hover {
+    opacity: 0.4;
+    transition: 0.6s ease;
+}
+
+.a_second {
+    background-image: url(../img/TSD_about_us_hero.jpg);
+}
+
+.t_second {
+    background-image: url(../img/unsplash-image-OVDtgUhUPBY.jpg);
+}
+
+.p_second {
+    background-image: url(../img/unsplash-image-zRwXf6PizEo.jpg);
+}
+
+.e_second {
+    background-image: url(../img/unsplash-image-O2u6gA2esAI.jpeg);
+}
+
+.c_second {
+    background-image: url(../img/unsplash-image--1Oa4KV37AY.jpg);
+}
+
+.con_second {
+    background-image: url(../img/TSD_enrollment_hero.jpg);
+}
+
+@media (max-width: 576px) {
+    .second {
+        padding-top: 150px;
+        padding-bottom: 60px;
+    }
+
+    .h_second {
+        padding-top: 150px;
+        padding-bottom: 60px;
+    }
+    #btnjon {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+
+
+}
+
+@media (max-width: 992px) {
+    .uli_a {
+        display: none;
+    }
+
+    .ul_li {
+        padding: 0px;
+    }
+
+    .uli_b {
+        display: block;
+    }
+
+    #li_l {
+        width: 300px;
+    }
+}
+
+@media (max-width: 1200px) {
+    #btn_c {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        letter-spacing: 1px;
+        font-size: 12px;
+    }
+
+    .ul_li > li > .a_c {
+        font-size: 14px;
+    }
+
+    .uli_b {
+        display: none;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    #btn_c {
+        padding-top: 13px;
+        padding-bottom: 13px;
+        letter-spacing: 3px;
+    }
+
+    .ul_li > li > .a_c {
+        font-size: 16px;
+    }
+
+    .uli_b {
+        display: none;
+    }
+
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+}
