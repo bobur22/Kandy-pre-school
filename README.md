@@ -9,7 +9,7 @@ This MahsulotCom admin management
       python3 install -m venv .env
 ## then activate env file.
 ## And after that start with installing requirements.txt
-    pip install -m requirements.txt
+    pip install -r requirements.txt
 ## then make a migrations.
     ./manage.py makemigrations
 
