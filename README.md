@@ -1,7 +1,7 @@
 <h1 align="center"> 👋 This is my Kandy project that is about pre-school</h1>
 <h3 align="center">A passionate frontend developer from Uzbekistan</h3>
 <h1> Intro </h1>
-This MahsulotCom admin management
+
 
 ## Before start pull my files to your lap top.
     git clone git@github.com:bobur22/Kandy-pre-school.git
